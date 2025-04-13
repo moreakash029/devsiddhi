@@ -51,7 +51,9 @@ const ContactSplit: React.FC = () => {
                 <FontAwesomeIcon icon={faEnvelope} />
               </div>
               <p className="text-gray-400 text-lg mt-2">Email</p>
-              <p className="mt-1 text-xl font-semibold">9nath.parte@gmail.com</p>
+              <p className="mt-1 text-xl font-semibold">
+                9nath.parte@gmail.com
+              </p>
             </div>
 
             {/* Card 3 */}
@@ -60,7 +62,9 @@ const ContactSplit: React.FC = () => {
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </div>
               <p className="text-gray-400 text-lg mt-2">Address</p>
-              <p className="mt-1 text-xl font-semibold">Navi Mumbai, Maharashtra</p>
+              <p className="mt-1 text-xl font-semibold">
+                Navi Mumbai, Maharashtra
+              </p>
             </div>
 
             {/* Card 4 */}
