@@ -14,6 +14,7 @@ import Count from "./pages/Count";
 import ContactUs from "./pages/ContactUs";
 import Upcoming from "./pages/Upcoming";
 import ContactSection from "./pages/ContactSection";
+import Post from "./pages/Post";
 
 function App() {
   const location = useLocation();
@@ -43,6 +44,11 @@ function App() {
     {
       path: "/contact-us",
       component: <ContactUs />,
+      ref: useRef<HTMLDivElement>(null),
+    },
+    {
+      path: "/post",
+      component: <Post />,
       ref: useRef<HTMLDivElement>(null),
     },
   ];

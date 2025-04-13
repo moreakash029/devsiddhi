@@ -76,6 +76,9 @@ export default function Navbar() {
               Contact us
             </button>
           </li>
+          <li>
+            <Link to="post" className="hover:text-[#AB5B55]">Post</Link>
+          </li>
         </ul>
       </div>
     </nav>

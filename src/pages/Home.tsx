@@ -31,7 +31,7 @@ export default function Home() {
         muted
         playsInline
       >
-        <source src="/videos/webFelicia+WalkThrough.webm" type="video/webm" />
+        <source src="/videos/fableweb.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
 
