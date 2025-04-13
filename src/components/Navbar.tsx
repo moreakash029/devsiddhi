@@ -29,6 +29,9 @@ export default function Navbar() {
           <li>
             <Link to="/contact-us" className="hover:text-[#AB5B55]">Contact Us</Link>
           </li>
+          <li>
+            <Link to="post" className="hover:text-[#AB5B55]">Post</Link>
+          </li>
         </ul>
       </div>
     </nav>
