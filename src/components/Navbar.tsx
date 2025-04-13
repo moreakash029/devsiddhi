@@ -58,7 +58,6 @@ export default function Navbar() {
             </button>
           </li>
 
-
           <li>
             <button
               onClick={() => scrollToPage(3)}
@@ -76,8 +75,14 @@ export default function Navbar() {
               Contact us
             </button>
           </li>
+
           <li>
-            <Link to="post" className="hover:text-[#AB5B55]">Post</Link>
+            <button
+              onClick={() => scrollToPage(5)}
+              className="hover:text-yellow-400"
+            >
+              Post
+            </button>
           </li>
         </ul>
       </div>
