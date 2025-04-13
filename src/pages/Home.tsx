@@ -13,6 +13,16 @@ export default function Home() {
         <source src="/videos/webFelicia+WalkThrough.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
+      <video
+        className="w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/videos/webFelicia+WalkThrough.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 }

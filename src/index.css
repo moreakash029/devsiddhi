@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
 body {
-    @apply bg-gray-800 text-white;
+  @apply bg-gray-800 text-white;
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 10px;
   }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 100vh;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #ccf528;
+    border-radius: 100vh;
+    border: 2px solid #f5f5f5;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #e2bb3c;
+  }
+}

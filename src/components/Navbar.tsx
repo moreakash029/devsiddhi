@@ -15,9 +15,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='sticky top-0 left-0 lg:top-auto z-50 w-full bg-transparent font-bold text-black p-5'>
-
-    {/* <nav className="sticky top-0 left-0 z-50 w-full bg-transparent shadow-md font-bold text-black p-4"> */}
+    <nav className="sticky top-0 left-0 lg:top-auto z-50 w-full bg-transparent font-bold text-black p-5">
+      {/* <nav className="sticky top-0 left-0 z-50 w-full bg-transparent shadow-md font-bold text-black p-4"> */}
       <div className="flex justify-between items-center">
         <div className="text-2xl font-bold">
           <img src="/DevsiddhiLogo.png" alt="Logo" className="w-40" />
@@ -42,6 +41,15 @@ export default function Navbar() {
               className="hover:text-yellow-400"
             >
               About
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => scrollToPage(1)}
+              className="hover:text-yellow-400"
+            >
+              Contact
             </button>
           </li>
         </ul>
