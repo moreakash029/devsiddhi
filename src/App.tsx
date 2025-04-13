@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from "react-router";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact"; // Example third page
 import Portfolio from "./pages/Projects";
 
 type Page = {
@@ -11,20 +10,22 @@ type Page = {
   component: JSX.Element;
   ref: React.RefObject<HTMLDivElement | null>;
 };
+import Count from "./pages/Count";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Define all pages here
   const pages: Page[] = [
     { path: "/", component: <Home />, ref: useRef<HTMLDivElement>(null) },
     { path: "/about", component: <About />, ref: useRef<HTMLDivElement>(null) },
+    { path: "/count", component: <Count />, ref: useRef<HTMLDivElement>(null) },
     { path: "/projects", component: <Portfolio />, ref: useRef<HTMLDivElement>(null) },
     {
-      path: "/contact",
-      component: <Contact />,
+      path: "/contact-us",
+      component: <ContactUs />,
       ref: useRef<HTMLDivElement>(null),
     },
   ];

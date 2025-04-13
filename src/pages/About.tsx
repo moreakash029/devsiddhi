@@ -1,4 +1,3 @@
-// src/pages/About.tsx (TypeScript + Tailwind)
 const About = () => {
   return (
     <>

@@ -26,7 +26,11 @@ export default function Navbar() {
           <span className="text-2xl">☰</span>
         </button>
 
-        <ul className={`lg:flex space-x-4 ${isOpen ? "block" : "hidden"}`}>
+        <ul
+          className={`lg:flex space-x-4 text-[#ffffff] ${
+            isOpen ? "block" : "hidden"
+          }`}
+        >
           <li>
             <button
               onClick={() => scrollToPage(0)}
@@ -35,6 +39,7 @@ export default function Navbar() {
               Home
             </button>
           </li>
+
           <li>
             <button
               onClick={() => scrollToPage(1)}
@@ -49,16 +54,26 @@ export default function Navbar() {
               onClick={() => scrollToPage(2)}
               className="hover:text-yellow-400"
             >
-              Projects
+              Count
             </button>
           </li>
+
 
           <li>
             <button
               onClick={() => scrollToPage(3)}
               className="hover:text-yellow-400"
             >
-              Contact
+              Projects
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => scrollToPage(4)}
+              className="hover:text-yellow-400"
+            >
+              Contact us
             </button>
           </li>
         </ul>
