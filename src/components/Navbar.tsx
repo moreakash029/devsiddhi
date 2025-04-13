@@ -46,7 +46,16 @@ export default function Navbar() {
 
           <li>
             <button
-              onClick={() => scrollToPage(1)}
+              onClick={() => scrollToPage(2)}
+              className="hover:text-yellow-400"
+            >
+              Projects
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => scrollToPage(3)}
               className="hover:text-yellow-400"
             >
               Contact

@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact"; // Example third page
+import Portfolio from "./pages/Projects";
 
 type Page = {
   path: string;
@@ -20,6 +21,7 @@ function App() {
   const pages: Page[] = [
     { path: "/", component: <Home />, ref: useRef<HTMLDivElement>(null) },
     { path: "/about", component: <About />, ref: useRef<HTMLDivElement>(null) },
+    { path: "/projects", component: <Portfolio />, ref: useRef<HTMLDivElement>(null) },
     {
       path: "/contact",
       component: <Contact />,
