@@ -13,7 +13,7 @@ const About = () => {
         <div className="w-full max-w-6xl rounded-3xl flex flex-col md:flex-row gap-4 md:gap-6 p-3 md:p-5">
           <div className="flex-1 flex flex-col justify-center gap-3">
             <img
-              src="/DevsiddhiLogo(3).png"
+              src="/DevsiddhiLogo.png"
               alt="Devsiddhi Logo"
               className="max-w-full h-auto"
             />

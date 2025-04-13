@@ -1,7 +1,8 @@
 // src/pages/Home.jsx
 export default function Home() {
   return (
-    <div className="w-screen h-screen overflow-hidden fixed top-0 left-0">
+    <div className="h-full w-full flex items-center overflow-hidden justify-center ">
+    {/* <div className="w-screen h-screen overflow-hidden fixed top-0 left-0"> */}
       <video
         className="w-full h-full object-cover"
         autoPlay
@@ -15,4 +16,3 @@ export default function Home() {
     </div>
   );
 }
-
