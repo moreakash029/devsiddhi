@@ -31,7 +31,7 @@ const images: ImageItem[] = [
   },
 ];
 
-const Portfolio: React.FC = () => {
+const Upcoming: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const handleSwapImage = (direction: number) => {
@@ -47,7 +47,7 @@ const Portfolio: React.FC = () => {
       <div className="flex flex-col items-center gap-10">
         {/* Title */}
         <h1 className="text-4xl font-bold text-center">
-          Completed Projects
+          Upcoming / Running Projects
         </h1>
 
         {/* Content */}
@@ -98,4 +98,4 @@ const Portfolio: React.FC = () => {
   );
 };
 
-export default Portfolio;
+export default Upcoming;

@@ -12,6 +12,8 @@ type Page = {
 };
 import Count from "./pages/Count";
 import ContactUs from "./pages/ContactUs";
+import Upcoming from "./pages/Upcoming";
+import ContactSection from "./pages/ContactSection";
 
 function App() {
   const location = useLocation();
@@ -22,7 +24,22 @@ function App() {
     { path: "/", component: <Home />, ref: useRef<HTMLDivElement>(null) },
     { path: "/about", component: <About />, ref: useRef<HTMLDivElement>(null) },
     { path: "/count", component: <Count />, ref: useRef<HTMLDivElement>(null) },
-    { path: "/projects", component: <Portfolio />, ref: useRef<HTMLDivElement>(null) },
+    {
+      path: "/projects",
+      component: <Portfolio />,
+      ref: useRef<HTMLDivElement>(null),
+    },
+    {
+      path: "/projects",
+      component: <Upcoming />,
+      ref: useRef<HTMLDivElement>(null),
+    },
+    {
+      path: "/projects",
+      component: <ContactSection />,
+      ref: useRef<HTMLDivElement>(null),
+    },
+
     {
       path: "/contact-us",
       component: <ContactUs />,
