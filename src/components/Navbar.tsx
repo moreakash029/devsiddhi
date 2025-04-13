@@ -16,12 +16,18 @@ export default function Navbar() {
           <span className="text-2xl">☰</span>
         </button>
 
-        <ul className={`lg:flex space-x-4 ${isOpen ? 'block' : 'hidden'}`}>
+        <ul className={`lg:flex space-x-4 text-[#ffffff] ${isOpen ? 'block' : 'hidden'}`}>
           <li>
-            <Link to="/" className="hover:text-yellow-400">Home</Link>
+            <Link to="/" className="hover:text-[#cf9797]">Home</Link>
           </li>
           <li>
-            <Link to="/about" className="hover:text-yellow-400">About</Link>
+            <Link to="/about" className="hover:text-[#AB5B55]">About</Link>
+          </li>
+          <li>
+            <Link to="/count" className="hover:text-[#AB5B55]">Count</Link>
+          </li>
+          <li>
+            <Link to="/contact-us" className="hover:text-[#AB5B55]">Contact Us</Link>
           </li>
         </ul>
       </div>

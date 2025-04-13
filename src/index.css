@@ -3,3 +3,64 @@
 body {
     @apply bg-gray-800 text-white;
   }
+
+
+
+.PhoneInputInput {
+
+  input {
+      background-color: #F9FAFA;
+      transition-duration: 300ms;
+      color: gray;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      border-radius: 0.5rem;
+      width: 100%;
+      border: #8D8D8D;
+  }
+
+  input:focus {
+      border-color: #000;
+  }
+}
+
+.inputShadow {
+  box-shadow: 1px 1px 1px 1px rgba(21, 29, 72, 0.05);
+}
+
+
+.box {
+  --border-angle: 0turn; 
+    --main-bg: conic-gradient(
+        from var(--border-angle),
+        #F9F0F0,
+        #F9F0F0 5%,
+        #F9F0F0 60%,
+        #F9F0F0 95%
+      );
+    
+    border: solid 4px transparent;
+    border-radius: 1.8em;
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #3EF5F5, #AB5B55 99%, transparent);
+    
+    background: 
+     
+      var(--main-bg) padding-box,
+      
+      var(--gradient-border) border-box, 
+      var(--main-bg) border-box;
+    
+    background-position: center center;
+  
+    animation: bg-spin 3s linear infinite;
+    @keyframes bg-spin {
+      to {
+        --border-angle: 1turn;
+      }
+    }
+  
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
