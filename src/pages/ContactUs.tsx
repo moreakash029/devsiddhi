@@ -1,37 +1,37 @@
 import PhoneInput, {
-  formatPhoneNumber,
-  formatPhoneNumberIntl,
-  Value,
+  // formatPhoneNumber,
+  // formatPhoneNumberIntl,
+  // Value,
 } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import "../index.css";
 import { useEffect, useState } from "react";
-import * as Yup from "yup";
-import { useFormik } from "formik";
+// import * as Yup from "yup";
+// import { useFormik } from "formik";
 
 const ContactUs = () => {
   const [country, setCountry] = useState<any>();
   const [value, setValue] = useState<any>();
-  const [laoding, setLoading] = useState(false);
+  // const [laoding, setLoading] = useState(false);
 
-  const validationSchema = Yup.object({
-    name: Yup.string()
-      .min(3, "Name should be at least 3 characters")
-      .max(20, "First Name should be at most 20 characters")
-      .required("First Name is required"),
-    email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    phoneNumber: Yup.string()
-      .required("Phone is required")
-      .min(5, "Phone Number should be at least 5 digits"),
-    // message: Yup.string().min(5, 'Message should be at least 5 characters').max(300, 'Message should be at most 300 characters').required('Message is required'),
-  });
+  // const validationSchema = Yup.object({
+  //   name: Yup.string()
+  //     .min(3, "Name should be at least 3 characters")
+  //     .max(20, "First Name should be at most 20 characters")
+  //     .required("First Name is required"),
+  //   email: Yup.string()
+  //     .email("Invalid email address")
+  //     .required("Email is required"),
+  //   phoneNumber: Yup.string()
+  //     .required("Phone is required")
+  //     .min(5, "Phone Number should be at least 5 digits"),
+  //   // message: Yup.string().min(5, 'Message should be at least 5 characters').max(300, 'Message should be at most 300 characters').required('Message is required'),
+  // });
 
-  const resetFormFields = () => {
-    // formik.resetForm();
-    setValue("");
-  };
+  // const resetFormFields = () => {
+  //   // formik.resetForm();
+  //   setValue("");
+  // };
   //   const formik = useFormik({
   //     initialValues: {
   //       name: "",
@@ -88,10 +88,10 @@ const ContactUs = () => {
   //     },
   //   });
 
-  const formik = "";
+  // const formik = "";
 
   useEffect(() => {
-    const formattedNumber = formatPhoneNumber(value);
+    // const formattedNumber = formatPhoneNumber(value);
     // formik.setFieldValue('phoneNumber', formattedNumber);
   }, [value]);
 
@@ -190,7 +190,7 @@ const ContactUs = () => {
                     className="w-full rounded-full bg-brown-100 p-2 font-semibold text-white focus:outline-none text-sm
                   inline-flex py-2 px-6 animate-shimmer items-center justify-center bg-[linear-gradient(110deg,#AB5B55,45%,#EADCF7,55%,#AB5B55)] bg-[length:200%_100%] gap-1 transition-colors focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
                     type="submit"
-                    disabled={laoding}
+                    // disabled={laoding}
                   >
                     Let's Begin
                   </button>
