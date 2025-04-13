@@ -1,216 +1,158 @@
-import PhoneInput, {
-  // formatPhoneNumber,
-  // formatPhoneNumberIntl,
-  // Value,
-} from "react-phone-number-input";
-import "react-phone-number-input/style.css";
-import "../index.css";
-import { useEffect, useState } from "react";
-// import * as Yup from "yup";
-// import { useFormik } from "formik";
+import React, { FormEvent, useState } from "react";
+import {
+  faPhone,
+  faEnvelope,
+  faMapMarkerAlt,
+  faShareAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faTwitter,
+  faDribbble,
+  faFacebookF,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const ContactUs = () => {
-  const [country, setCountry] = useState<any>();
-  const [value, setValue] = useState<any>();
-  // const [laoding, setLoading] = useState(false);
+const ContactSplit: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // const validationSchema = Yup.object({
-  //   name: Yup.string()
-  //     .min(3, "Name should be at least 3 characters")
-  //     .max(20, "First Name should be at most 20 characters")
-  //     .required("First Name is required"),
-  //   email: Yup.string()
-  //     .email("Invalid email address")
-  //     .required("Email is required"),
-  //   phoneNumber: Yup.string()
-  //     .required("Phone is required")
-  //     .min(5, "Phone Number should be at least 5 digits"),
-  //   // message: Yup.string().min(5, 'Message should be at least 5 characters').max(300, 'Message should be at most 300 characters').required('Message is required'),
-  // });
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  // const resetFormFields = () => {
-  //   // formik.resetForm();
-  //   setValue("");
-  // };
-  //   const formik = useFormik({
-  //     initialValues: {
-  //       name: "",
-  //       email: "",
-  //       phoneNumber: "",
-  //       companyName: "",
-  //     },
-  //     validationSchema,
-  //     onSubmit: async (values, { resetForm }) => {
-  //       try {
-  //         setLoading(true);
-
-  //         const entryPage =
-  //           sessionStorage.getItem("entryPage") || "Unknown Entry Page";
-
-  //         const body = {
-  //           name: values.name,
-  //           to: values.email,
-  //           phoneNumber: `${
-  //             formatPhoneNumberIntl(value).split(" ").slice(0, 1)[0]
-  //           } ${values.phoneNumber}`,
-  //           companyName: values.companyName,
-  //           from: "Page " + slug,
-  //           entryPage: entryPage,
-  //         };
-  //         console.log(body);
-
-  //         const response = await fetch(
-  //           `${process.env.NEXT_PUBLIC_BACKEND_URL}/send-email`,
-  //           {
-  //             method: "POST",
-  //             headers: {
-  //               "Content-Type": "application/json",
-  //             },
-  //             body: JSON.stringify(body),
-  //           }
-  //         );
-
-  //         if (response.ok) {
-  //           console.log("Email sent successfully");
-  //           toast.success("Email sent successfully");
-  //           resetFormFields();
-  //         } else {
-  //           console.log("response", response);
-  //           console.error("Failed to send email");
-  //           toast.error("Failed to send email");
-  //         }
-  //       } catch (error) {
-  //         console.error("Error while sending email", error);
-  //         toast.error(error?.message);
-  //       } finally {
-  //         setLoading(false);
-  //       }
-  //     },
-  //   });
-
-  // const formik = "";
-
-  useEffect(() => {
-    // const formattedNumber = formatPhoneNumber(value);
-    // formik.setFieldValue('phoneNumber', formattedNumber);
-  }, [value]);
-
-  useEffect(() => {
-    const getGeoInfo = async () => {
-      try {
-        const response = await fetch("https://ipapi.co/json/");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        setCountry(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    getGeoInfo();
-  }, []);
-
+    // Simulate submission logic
+    setTimeout(() => {
+      alert("Form submitted!");
+      setIsSubmitting(false);
+    }, 2000);
+  };
   return (
-    <div className="w-full min-h-screen flex items-center justify-cente">
-    <div className="w-full max-w-5xl mx-auto p-3 lg:p-0 flex justify-center flex-col gap-16">
-      <div className="flex items-center justify-center">
-        <form
-          // onSubmit={e => {
-          //   e.preventDefault();
-          //   formik.handleSubmit(e);
-          // }}
-          className="my-5"
-        >
-          {/* <div className="box"> */}
-          <div
-            className="flex items-center justify-center rounded-3xl bg-[#dd5b5b] p-3 md:p-5"
-            // style={{ boxShadow: '10px 10px 16px 0px rgba(0, 0, 0, 0.2)' }}
-          >
-            <div className="flex w-full max-w-4xl flex-col items-center lg:flex-row md:gap-6">
-              <div className="w-full lg:w-1/2">
-                <div className="text-2xl font-semibold md:text-3xl text-">
-                  Schedule a <span className="codeb">call</span> now
-                </div>
-                <div className="mt-2 text-sm leading-normal">
-                  Start your offshore web & mobile app team with a free
-                  consultation from our solutions engineer.
-                </div>
+    <div className="flex flex-col md:flex-row min-h-screen">
+      <div className="flex-1 flex flex-col items-center px-6 py-10">
+        <div className="w-full max-w-2xl flex flex-col gap-10 space-y-4">
+          {/* Title */}
+          <h1 className="text-2xl flex flex-col items-center justify-center font-bold">
+            Get in touch
+          </h1>
+
+          {/* Details */}
+          <div className="grid grid-cols-2 gap-10 m-2 p-4">
+            <div className="relative bg-[#1f1f1f] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
+                <FontAwesomeIcon icon={faPhone} />
               </div>
-              <div className="mt-6 flex w-full flex-col items-center justify-center md:mt-0 lg:w-1/2">
-                <div className="flex flex-col w-full flex-wrap items-center justify-center gap-2">
-                  <div className="w-full flex flex-col gap-1 md:gap-2 md:flex-row items-center justify-between">
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Name"
-                      //   onChange={formik.handleChange}
-                      //   onBlur={formik.handleBlur}
-                      //   value={formik.values.name}
-                      className="w-full rounded-full border border-gray-300 bg-white px-3 py-2 focus:outline-none text-sm"
-                      required
-                    />
+              <p className="text-gray-400 text-lg mt-2">Phone</p>
+              <p className="mt-1 text-xl font-medium">+91 9833 535 250</p>
+            </div>
 
-                    <input
-                      //   onChange={formik.handleChange}
-                      //   onBlur={formik.handleBlur}
-                      //   value={formik.values.email}
-                      placeholder="Email"
-                      type="email"
-                      name="email"
-                      id="email"
-                      className="w-full rounded-full border border-gray-300 bg-white px-3 py-2 focus:outline-none text-sm"
-                      required
-                    />
-                  </div>
-                  <div className="w-full flex flex-col gap-1 md:gap-2 md:flex-row items-center justify-between">
-                    <PhoneInput
-                      international
-                      defaultCountry={country?.country}
-                      value={value}
-                      onChange={setValue}
-                      className={`PhoneInputInput w-full rounded-full border border-gray-300 bg-white px-3 py-2 focus:outline-none text-sm`}
-                      id="phoneNumber"
-                      name="phoneNumber"
-                      //   onBlur={formik.handleBlur}
-                    />
-                    <input
-                      //   onChange={formik.handleChange}
-                      //   onBlur={formik.handleBlur}
-                      //   value={formik.values.companyName}
-                      name="companyName"
-                      id="companyName"
-                      placeholder="Company Name"
-                      className="w-full rounded-full border border-gray-300 bg-white px-3 py-2 focus:outline-none text-sm"
-                      required
-                    />
-                  </div>
-                  <button
-                    className="w-full rounded-full bg-brown-100 p-2 font-semibold text-white focus:outline-none text-sm
-                  inline-flex py-2 px-6 animate-shimmer items-center justify-center bg-[linear-gradient(110deg,#AB5B55,45%,#EADCF7,55%,#AB5B55)] bg-[length:200%_100%] gap-1 transition-colors focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-                    type="submit"
-                    // disabled={laoding}
-                  >
-                    Let's Begin
-                  </button>
+            {/* Card 2 */}
+            <div className="relative bg-[#1f1f1f] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
+                <FontAwesomeIcon icon={faEnvelope} />
+              </div>
+              <p className="text-gray-400 text-lg mt-2">Email</p>
+              <p className="mt-1 text-xl font-semibold">
+                9nath.parte@gmail.com
+              </p>
+            </div>
 
-                  <p className="text-xs text-[#444444] mt-2 font-light">
-                    We respect your privacy, and be assured that your data will
-                    not be shared
-                  </p>
-                </div>
+            {/* Card 3 */}
+            <div className="relative bg-[#1f1f1f] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+              </div>
+              <p className="text-gray-400 text-lg mt-2">Address</p>
+              <p className="mt-1 text-xl font-semibold">
+                Navi Mumbai, Maharashtra
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="relative bg-[#1f1f1f] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
+                <FontAwesomeIcon icon={faShareAlt} />
+              </div>
+              <p className="text-gray-400 text-lg mt-2">Follow Me</p>
+              <div className="mt-3 flex justify-center space-x-4 text-white text-xl">
+                <FontAwesomeIcon icon={faGithub} />
+                <FontAwesomeIcon icon={faTwitter} />
+                <FontAwesomeIcon icon={faDribbble} />
+                <FontAwesomeIcon icon={faFacebookF} />
               </div>
             </div>
           </div>
-
-          {/* {laoding && <Loader />} */}
-          {/* </div> */}
-        </form>
+        </div>
       </div>
-    </div>
+
+      <div className="hidden md:block w-px bg-gray-300" />
+
+      <div className="flex-1 flex flex-col items-center px-6 py-5">
+        <div className="w-full max-w-3xl mx-auto px-4 py-10 flex flex-col gap-8">
+          {/* Title */}
+          <div className="text-center space-y-2">
+            <h1 className="text-2xl md:text-3xl font-bold text-white">
+              Schedule a call now
+            </h1>
+            <h4 className="text-base md:text-lg font-medium text-gray-300 max-w-xl mx-auto">
+              Start your offshore web & mobile app team with a free consultation
+              from our solutions engineer.
+            </h4>
+          </div>
+
+          {/* Form Container */}
+          <div className="bg-[#1f1f1f] border border-[#32323c] rounded-xl shadow-lg px-6 py-8 w-full max-w-md mx-auto">
+            <form onSubmit={onSubmit} className="flex flex-col gap-4 w-full">
+              <div>
+                <label className="text-gray-300 text-sm font-medium">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  className="w-full mt-1 p-3 pl-4 rounded-md bg-[#32323c] text-gray-400 text-base focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="text-gray-300 text-sm font-medium">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  className="w-full mt-1 p-3 pl-4 rounded-md bg-[#32323c] text-gray-400 text-base focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="text-gray-300 text-sm font-medium">
+                  Write your message here
+                </label>
+                <textarea
+                  name="message"
+                  rows={4}
+                  placeholder="Enter your message"
+                  className="w-full mt-1 p-3 pl-4 rounded-md bg-[#32323c] text-gray-400 text-base resize-none focus:outline-none"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-gradient-to-r from-[#df8908] to-[#b415ff] text-white text-base px-8 py-3 rounded-full mt-2 transition-transform duration-300 hover:scale-105 disabled:opacity-60"
+              >
+                {isSubmitting ? "Submitting..." : "Submit now"}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
-
-export default ContactUs;
+export default ContactSplit;

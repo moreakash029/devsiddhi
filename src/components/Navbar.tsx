@@ -16,7 +16,7 @@ export default function Navbar() {
           <span className="text-2xl">☰</span>
         </button>
 
-        <ul className={`lg:flex space-x-4 text-[#ffffff] ${isOpen ? 'block' : 'hidden'}`}>
+        <ul className={`lg:flex space-x-8 text-[#ffffff] ${isOpen ? 'block' : 'hidden'}`}>
           <li>
             <Link to="/" className="hover:text-[#cf9797]">Home</Link>
           </li>
