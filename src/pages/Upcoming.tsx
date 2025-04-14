@@ -43,7 +43,7 @@ const Upcoming: React.FC = () => {
   const currentImage = images[currentIndex];
 
   return (
-    <section className="relative px-12 py-10 text-white">
+    <section className="relative px-12 py-10 text-[#B68842]">
       <div className="flex flex-col items-center gap-10">
         {/* Title */}
         <h1 className="text-4xl font-bold text-center">
@@ -64,11 +64,11 @@ const Upcoming: React.FC = () => {
           {/* Details Section */}
           <div className="flex flex-col gap-4 max-w-sm">
             <h2 className="text-3xl font-bold">{currentImage.title}</h2>
-            <p className="text-gray-300">
+            <p className="text-[#B68842]">
               This is a brief overview of the project. It showcases some of the
               best work I've done using React, Tailwind, and other technologies.
             </p>
-            <ul className="text-gray-300 space-y-2">
+            <ul className="text-[#B68842] space-y-2">
               <li>
                 <strong>Client:</strong> {currentImage.caption}
               </li>
