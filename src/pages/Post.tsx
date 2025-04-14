@@ -10,7 +10,7 @@ const posts = [
     date: "9 Apr 2022",
     comments: 17,
     excerpt: "Ncididunt ut labore et dolore magna aliqua. Ut enim veniam...",
-    image: "/blog-post-1.jpg",
+    image: "assets/green.jpg",
   },
   {
     category: "DEVELOPMENT",
@@ -18,7 +18,7 @@ const posts = [
     date: "21 Feb 2022",
     comments: 34,
     excerpt: "Ncididunt ut labore et dolore magna aliqua. Ut enim veniam...",
-    image: "/blog-post-1.jpg",
+    image: "assets/fable.jpg",
   },
   {
     category: "ESSENTIALS",
@@ -26,7 +26,7 @@ const posts = [
     date: "1 Jan 2022",
     comments: 10,
     excerpt: "Ncididunt ut labore et dolore magna aliqua. Ut enim veniam...",
-    image: "/blog-post-1.jpg",
+    image: "assets/felicia.jpg",
   },
   {
     category: "MARKETING",
@@ -34,7 +34,7 @@ const posts = [
     date: "15 Dec 2021",
     comments: 23,
     excerpt: "Ncididunt ut labore et dolore magna aliqua. Ut enim veniam...",
-    image: "/blog-post-1.jpg",
+    image: "assets/Fabula.jpg",
   },
 ];
 
@@ -81,30 +81,28 @@ const Post = () => {
     <div className="min-h-screen flex items-center justify-center p-6">
       {/* Vertical "Latest Posts" */}
       <div className="hidden md:flex flex-col justify-center items-center">
-        <h2 className="text-6xl font-extrabold transform -rotate-90 ">
+        <h2 className="text-6xl text-[#B68842] font-extrabold transform -rotate-90 ">
           Latest Posts
         </h2>
       </div>
-      
+
       <div className="w-full max-w-[900px] relative">
         <Slider {...settings}>
           {posts.map((post, index) => (
             <div key={index} className="px-6">
-              <div className="bg-[#3a3535] text-white rounded-3xl overflow-hidden shadow-lg h-[500px]">
+              <div className="bg-[#3a3535] text-[#B68900] rounded-3xl overflow-hidden shadow-lg h-[500px]">
                 <img
                   src={post.image}
                   alt={post.title}
                   className="w-full h-60 object-cover"
                 />
                 <div className="p-4">
-                  <span className="inline-block bg-yellow-400 text-black text-xs px-3 py-1 rounded-full mb-3">
+                  <span className="inline-block bg-[#B68842] text-black text-xs px-3 py-1 rounded-full mb-3">
                     {post.category}
                   </span>
-                  <h3 className="text-xl font-bold  py-4">
-                    {post.title}
-                  </h3>
-                  <p className="text-md text-gray-300 mb-4">{post.excerpt}</p>
-                  <div className="flex text-xs text-gray-400 gap-4 py-4">
+                  <h3 className="text-xl font-bold  py-4">{post.title}</h3>
+                  <p className="text-md text-[#B68842] mb-4">{post.excerpt}</p>
+                  <div className="flex text-xs text-[#B68842] gap-4 py-4">
                     <span>📅 {post.date}</span>
                     <span>💬 {post.comments} comments</span>
                   </div>
