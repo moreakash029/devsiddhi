@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="sticky top-0 left-0 lg:top-auto z-50 w-full bg-transparent font-bold p-5">
       <div className="flex justify-between items-center">
         <div className="text-2xl font-bold">
-          <img src="/DevsiddhiLogo.png" alt="" className="w-45" />
+          <img src="Devsiddhi-Logo-(2).png" alt="" className="w-45" />
         </div>
 
         <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">

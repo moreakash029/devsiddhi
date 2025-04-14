@@ -93,50 +93,50 @@ const ContactSplit: React.FC = () => {
             <h1 className="text-2xl md:text-3xl font-bold text-white">
               Schedule a call now
             </h1>
-            <h4 className="text-base md:text-lg font-medium text-gray-300 max-w-xl mx-auto">
+            <h4 className="text-base md:text-lg font-bold text-black max-w-xl mx-auto">
               Start your offshore web & mobile app team with a free consultation
               from our solutions engineer.
             </h4>
           </div>
 
           {/* Form Container */}
-          <div className="bg-[#1f1f1f] border border-[#32323c] rounded-xl shadow-lg px-6 py-8 w-full max-w-md mx-auto">
+          <div className="bg-white border border-red-300 rounded-xl shadow-lg px-6 py-8 w-full max-w-md mx-auto">
             <form onSubmit={onSubmit} className="flex flex-col gap-4 w-full">
               <div>
-                <label className="text-gray-300 text-sm font-medium">
+                <label className="text-red-900 text-sm font-medium">
                   Your Name
                 </label>
                 <input
                   type="text"
                   name="name"
                   placeholder="Enter your name"
-                  className="w-full mt-1 p-3 pl-4 rounded-md bg-[#32323c] text-gray-400 text-base focus:outline-none"
+                  className="w-full mt-1 p-3 pl-4 rounded-md bg-red-50 text-red-900 text-base focus:outline-none border border-red-200"
                   required
                 />
               </div>
 
               <div>
-                <label className="text-gray-300 text-sm font-medium">
+                <label className="text-red-900 text-sm font-medium">
                   Your Email
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="Enter your email"
-                  className="w-full mt-1 p-3 pl-4 rounded-md bg-[#32323c] text-gray-400 text-base focus:outline-none"
+                  className="w-full mt-1 p-3 pl-4 rounded-md bg-red-50 text-red-900 text-base focus:outline-none border border-red-200"
                   required
                 />
               </div>
 
               <div>
-                <label className="text-gray-300 text-sm font-medium">
+                <label className="text-red-900 text-sm font-medium">
                   Write your message here
                 </label>
                 <textarea
                   name="message"
                   rows={4}
                   placeholder="Enter your message"
-                  className="w-full mt-1 p-3 pl-4 rounded-md bg-[#32323c] text-gray-400 text-base resize-none focus:outline-none"
+                  className="w-full mt-1 p-3 pl-4 rounded-md bg-red-50 text-red-900 text-base resize-none focus:outline-none border border-red-200"
                   required
                 />
               </div>
@@ -144,7 +144,7 @@ const ContactSplit: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-[#df8908] to-[#b415ff] text-white text-base px-8 py-3 rounded-full mt-2 transition-transform duration-300 hover:scale-105 disabled:opacity-60"
+                className="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white text-base px-8 py-3 rounded-full mt-2 transition-transform duration-300 hover:scale-105 disabled:opacity-60"
               >
                 {isSubmitting ? "Submitting..." : "Submit now"}
               </button>

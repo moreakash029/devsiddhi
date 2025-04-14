@@ -5,7 +5,7 @@ const About = () => {
         {/* Left Side - Image */}
         <div className="flex-1 flex flex-col justify-center items-center">
           <img
-            src="/DevsiddhiLogo.png"
+            src="/Devsiddhi-Logo-(2).png"
             alt="Devsiddhi Logo"
             className="max-w-full h-auto object-contain"
           />
@@ -16,7 +16,7 @@ const About = () => {
           {/* <p className="text-5xl font-bold text-center pt-14 lg:pt-0">
             About Us
           </p> */}
-          <p className="text-lg font-semibold">
+          <p className="text-lg font-semibold text-[#e07f7f]">
             Devsiddhi Construction Co., a pioneering real-estate development
             company based in Ahmedabad (Gujarat), has been benchmarking the
             industry since its inception in 2015.
