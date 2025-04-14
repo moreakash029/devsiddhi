@@ -16,24 +16,20 @@ const About = () => {
           {/* <p className="text-5xl font-bold text-center pt-14 lg:pt-0">
             About Us
           </p> */}
-          <p className="text-lg font-semibold text-[#e07f7f]">
+          <p className="text-2lg text-[#B68842] font-bold font-serif">
             Devsiddhi Construction Co., a pioneering real-estate development
             company based in Ahmedabad (Gujarat), has been benchmarking the
             industry since its inception in 2015.
           </p>
-          <p className="text-md font-medium">
+          <p className="text-2lg text-[#B68842] font-bold font-serif">
             Devsiddhi Group imbibes the three core values of Excellence,
             Expertise and Elegance across all the development projects that they
             undertake.
           </p>
-          <p className="text-md font-medium">
+          <p className="text-2lg text-[#B68842] font-bold font-serif">
             The portfolio is a mix of residential and commercial projects.
             Leading corporate and retail brands have chosen Devsiddhi
             properties.
-          </p>
-          <p className="text-md font-medium">
-            Real estate is a significant investment; Devsiddhi aims to be a
-            bridge between you and your dreams.
           </p>
         </div>
       </div>

@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Count from "./pages/Count";
 import ContactUs from "./pages/ContactUs";
 import Post from "./pages/Post";
+import Upcoming from "./pages/Upcoming";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/count" element={<Count />} />
+        <Route path="/portfolio" element={<Upcoming />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/post" element={<Post />} />
       </Routes>
