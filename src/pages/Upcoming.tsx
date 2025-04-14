@@ -43,7 +43,7 @@ const Upcoming: React.FC = () => {
   const currentImage = images[currentIndex];
 
   return (
-    <section className="relative px-12 py-10 text-[#B68842]">
+    <section className="relative px-12 py-10 text-[#D12023]">
       <div className="flex flex-col items-center gap-10">
         {/* Title */}
         <h1 className="text-4xl font-bold text-center">
@@ -64,7 +64,7 @@ const Upcoming: React.FC = () => {
           {/* Details Section */}
           <div className="flex flex-col gap-4 max-w-sm">
             <h2 className="text-3xl font-bold">{currentImage.title}</h2>
-            <p className="text-[#B68842]">
+            <p className="text-black">
               This is a brief overview of the project. It showcases some of the
               best work I've done using React, Tailwind, and other technologies.
             </p>
@@ -78,14 +78,14 @@ const Upcoming: React.FC = () => {
           {/* Navigation Buttons */}
           <div className="flex flex-col items-center gap-4">
             <button
-              className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white text-xl hover:bg-orange-600"
+              className="w-12 h-12 bg-[#B68842] rounded-full flex items-center justify-center text-white text-xl hover:bg-[#D12023]"
               onClick={() => handleSwapImage(-1)}
               aria-label="Previous Project"
             >
               <FontAwesomeIcon icon={faArrowUp} />
             </button>
             <button
-              className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white text-xl hover:bg-orange-600"
+              className="w-12 h-12 bg-[#B68842] rounded-full flex items-center justify-center text-white text-xl hover:bg-[#D12023]"
               onClick={() => handleSwapImage(1)}
               aria-label="Next Project"
             >

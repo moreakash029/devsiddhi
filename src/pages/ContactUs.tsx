@@ -38,7 +38,7 @@ const ContactSplit: React.FC = () => {
           {/* Details */}
           <div className="grid grid-cols-2 gap-10 m-2 p-4">
             <div className="relative bg-[#B68842] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-[#B68842] text-xl">
                 <FontAwesomeIcon icon={faPhone} />
               </div>
               <p className="text-black font-bold text-lg mt-2">Phone</p>
@@ -47,7 +47,7 @@ const ContactSplit: React.FC = () => {
 
             {/* Card 2 */}
             <div className="relative bg-[#B68842] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-[#B68842] text-xl">
                 <FontAwesomeIcon icon={faEnvelope} />
               </div>
               <p className="text-black font-bold text-lg mt-2">Email</p>
@@ -58,7 +58,7 @@ const ContactSplit: React.FC = () => {
 
             {/* Card 3 */}
             <div className="relative bg-[#B68842] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-[#B68842] text-xl">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </div>
               <p className="text-black font-bold text-lg mt-2">Address</p>
@@ -69,7 +69,7 @@ const ContactSplit: React.FC = () => {
 
             {/* Card 4 */}
             <div className="relative bg-[#B68842] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-[#B68842] text-xl">
                 <FontAwesomeIcon icon={faShareAlt} />
               </div>
               <p className="text-black font-bold text-lg mt-2">Follow Me</p>
@@ -93,7 +93,7 @@ const ContactSplit: React.FC = () => {
             <h1 className="text-2xl md:text-3xl font-bold text-[#B68842]">
               Schedule a call now
             </h1>
-            <h4 className="text-base md:text-sm font-bold text-[#B68842] max-w-xl mx-auto">
+            <h4 className="text-base md:text-sm font-bold text-[#D12023] max-w-xl mx-auto">
               Start your offshore web & mobile app team with a free consultation
               from our solutions engineer.
             </h4>
@@ -144,7 +144,7 @@ const ContactSplit: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-[#B68842] to-[#B68842] text-white font-bold text-base px-8 py-3 rounded-full mt-2 transition-transform duration-300 hover:scale-105 disabled:opacity-60"
+                className="bg-gradient-to-r from-[#B68842] to-[#B68842] text-white font-bold text-base px-8 py-3 rounded-full mt-2 transition-transform duration-300 hover:scale-105 hover:bg-[#D12023] disabled:opacity-60"
               >
                 {isSubmitting ? "Submitting..." : "Submit now"}
               </button>
