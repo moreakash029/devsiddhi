@@ -43,7 +43,7 @@ const Upcoming: React.FC = () => {
   const currentImage = images[currentIndex];
 
   return (
-    <section className="relative px-12 py-10 text-[#D12023]">
+    <section className="relative px-12 py-10 text-[#B68842]">
       <div className="flex flex-col items-center gap-10">
         {/* Title */}
         <h1 className="text-4xl font-bold text-center">
