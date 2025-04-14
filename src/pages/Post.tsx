@@ -78,7 +78,7 @@ const settings = {
 
 const Post = () => {
   return (
-    <div className="min-h-screen text-white flex items-center justify-center p-6">
+    <div className="min-h-screen flex items-center justify-center p-6">
       {/* Vertical "Latest Posts" */}
       <div className="hidden md:flex flex-col justify-center items-center">
         <h2 className="text-6xl font-extrabold transform -rotate-90 ">

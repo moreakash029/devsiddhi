@@ -37,7 +37,7 @@ const ContactSplit: React.FC = () => {
 
           {/* Details */}
           <div className="grid grid-cols-2 gap-10 m-2 p-4">
-            <div className="relative bg-[#1f1f1f] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
+            <div className="relative bg-[#964B00] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
                 <FontAwesomeIcon icon={faPhone} />
               </div>
@@ -46,7 +46,7 @@ const ContactSplit: React.FC = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="relative bg-[#1f1f1f] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
+            <div className="relative bg-[#964B00] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
                 <FontAwesomeIcon icon={faEnvelope} />
               </div>
@@ -57,7 +57,7 @@ const ContactSplit: React.FC = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="relative bg-[#1f1f1f] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
+            <div className="relative bg-[#964B00] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </div>
@@ -68,7 +68,7 @@ const ContactSplit: React.FC = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="relative bg-[#1f1f1f] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
+            <div className="relative bg-[#964B00] text-white rounded-3xl pt-14 pb-6 px-6 text-center shadow-lg">
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-[#1f1f1f] border-4 border-black rounded-full flex items-center justify-center text-yellow-400 text-xl">
                 <FontAwesomeIcon icon={faShareAlt} />
               </div>
