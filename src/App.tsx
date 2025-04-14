@@ -11,10 +11,10 @@ type Page = {
   ref: React.RefObject<HTMLDivElement | null>;
 };
 import Count from "./pages/Count";
-import ContactUs from "./pages/ContactUs";
 import Upcoming from "./pages/Upcoming";
 import ContactSection from "./pages/ContactSection";
 import Post from "./pages/Post";
+import ContactSplit from "./pages/ContactSection";
 
 function App() {
   const location = useLocation();
@@ -43,7 +43,7 @@ function App() {
 
     {
       path: "/contact-us",
-      component: <ContactUs />,
+      component: <ContactSplit />,
       ref: useRef<HTMLDivElement>(null),
     },
     {
