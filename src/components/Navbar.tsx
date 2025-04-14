@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +41,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 left-0 lg:top-auto z-50 w-full bg-transparent font-bold text-black p-5">
+    <nav className="sticky top-0 left-0 lg:top-auto z-50 w-full bg-opacity-5 font-bold text-black p-5">
       <div className="flex justify-between items-center">
         <div className="text-2xl font-bold">
           <img src="/DevsiddhiLogo.png" alt="Logo" className="w-40" />
