@@ -37,8 +37,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/contact-us" className="hover:text-[#FFD700]">
-              Contact Us
+            <Link to="/count" className="hover:text-[#FFD700]">
+              Count
+            </Link>
+          </li>
+          <li>
+            <Link to="/projects" className="hover:text-[#FFD700]">
+              Projects
             </Link>
           </li>
           <li>
