@@ -8,6 +8,7 @@ import ContactUs from "./pages/ContactUs";
 import Post from "./pages/Post";
 import Upcoming from "./pages/Upcoming";
 import CustomScrollbar from "./components/CustomScrollbar";
+import Portfolio from "./pages/Completed";
 
 function App() {
   const location = useLocation();
@@ -20,7 +21,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/count" element={<Count />} />
-          <Route path="/portfolio" element={<Upcoming />} />
+          <Route path="/portfolio-upcoming" element={<Upcoming />} />
+          <Route path="/portfolio-completed" element={<Portfolio />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/post" element={<Post />} />
         </Routes>
