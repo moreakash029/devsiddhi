@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import PageTransition from "../components/PageTransition";
 
 interface ImageItem {
   src: string;
@@ -43,56 +44,59 @@ const Portfolio: React.FC = () => {
   const currentImage = images[currentIndex];
 
   return (
-    <section className="relative px-12 py-10 text-white">
-      <div className="flex flex-col items-center gap-10">
-        {/* Title */}
-        <h1 className="text-4xl font-bold text-center">Completed Projects</h1>
+    <PageTransition>
+      <section className="relative px-12 py-10 text-white">
+        <div className="flex flex-col items-center gap-10">
+          {/* Title */}
+          <h1 className="text-4xl font-bold text-center">Completed Projects</h1>
 
-        {/* Content */}
-        <div className="flex flex-wrap items-center justify-center gap-10 w-full">
-          {/* Image Section */}
-          <div className="w-[600px] h-[400px] rounded-xl overflow-hidden shadow-lg">
-            <img
-              src={currentImage.src}
-              alt={currentImage.caption}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          {/* Content */}
+          <div className="flex flex-wrap items-center justify-center gap-10 w-full">
+            {/* Image Section */}
+            <div className="w-[600px] h-[400px] rounded-xl overflow-hidden shadow-lg">
+              <img
+                src={currentImage.src}
+                alt={currentImage.caption}
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-          {/* Details Section */}
-          <div className="flex flex-col gap-4 max-w-sm">
-            <h2 className="text-3xl font-bold">{currentImage.title}</h2>
-            <p className="text-gray-300">
-              This is a brief overview of the project. It showcases some of the
-              best work I've done using React, Tailwind, and other technologies.
-            </p>
-            <ul className="text-gray-300 space-y-2">
-              <li>
-                <strong>Client:</strong> {currentImage.caption}
-              </li>
-            </ul>
-          </div>
+            {/* Details Section */}
+            <div className="flex flex-col gap-4 max-w-sm">
+              <h2 className="text-3xl font-bold">{currentImage.title}</h2>
+              <p className="text-gray-300">
+                This is a brief overview of the project. It showcases some of
+                the best work I've done using React, Tailwind, and other
+                technologies.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>
+                  <strong>Client:</strong> {currentImage.caption}
+                </li>
+              </ul>
+            </div>
 
-          {/* Navigation Buttons */}
-          <div className="flex flex-col items-center gap-4">
-            <button
-              className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white text-xl hover:bg-orange-600"
-              onClick={() => handleSwapImage(-1)}
-              aria-label="Previous Project"
-            >
-              <FontAwesomeIcon icon={faArrowUp} />
-            </button>
-            <button
-              className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white text-xl hover:bg-orange-600"
-              onClick={() => handleSwapImage(1)}
-              aria-label="Next Project"
-            >
-              <FontAwesomeIcon icon={faArrowDown} />
-            </button>
+            {/* Navigation Buttons */}
+            <div className="flex flex-col items-center gap-4">
+              <button
+                className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white text-xl hover:bg-orange-600"
+                onClick={() => handleSwapImage(-1)}
+                aria-label="Previous Project"
+              >
+                <FontAwesomeIcon icon={faArrowUp} />
+              </button>
+              <button
+                className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white text-xl hover:bg-orange-600"
+                onClick={() => handleSwapImage(1)}
+                aria-label="Next Project"
+              >
+                <FontAwesomeIcon icon={faArrowDown} />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </PageTransition>
   );
 };
 

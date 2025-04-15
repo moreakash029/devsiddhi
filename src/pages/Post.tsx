@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import PageTransition from "../components/PageTransition";
 
 const posts = [
   {
@@ -78,41 +79,44 @@ const settings = {
 
 const Post = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      {/* Vertical "Latest Posts" */}
-      <div className="hidden md:flex flex-col justify-center items-center">
-        <h2 className="text-6xl text-[#B68842] font-extrabold transform -rotate-90 ">
-          Latest Posts
-        </h2>
-      </div>
+    <PageTransition>
+      <div className="min-h-screen flex items-center justify-center p-6">
+        <div className="hidden md:flex flex-col justify-center items-center">
+          <h2 className="text-6xl text-[#B68842] font-extrabold transform -rotate-90 ">
+            Latest Posts
+          </h2>
+        </div>
 
-      <div className="w-full max-w-[900px] relative">
-        <Slider {...settings}>
-          {posts.map((post, index) => (
-            <div key={index} className="px-6">
-              <div className="bg-[#3a3535] text-[#B68900] rounded-3xl overflow-hidden shadow-lg h-[500px]">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-60 object-cover"
-                />
-                <div className="p-4">
-                  <span className="inline-block bg-[#B68842] text-black text-xs px-3 py-1 rounded-full mb-3">
-                    {post.category}
-                  </span>
-                  <h3 className="text-xl font-bold  py-4">{post.title}</h3>
-                  <p className="text-md text-[#B68842] mb-4">{post.excerpt}</p>
-                  <div className="flex text-xs text-[#B68842] gap-4 py-4">
-                    <span>📅 {post.date}</span>
-                    <span>💬 {post.comments} comments</span>
+        <div className="w-full max-w-[900px] relative">
+          <Slider {...settings}>
+            {posts.map((post, index) => (
+              <div key={index} className="px-6">
+                <div className="bg-[#3a3535] text-[#B68900] rounded-3xl overflow-hidden shadow-lg h-[500px]">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-60 object-cover"
+                  />
+                  <div className="p-4">
+                    <span className="inline-block bg-[#B68842] text-black text-xs px-3 py-1 rounded-full mb-3">
+                      {post.category}
+                    </span>
+                    <h3 className="text-xl font-bold  py-4">{post.title}</h3>
+                    <p className="text-md text-[#B68842] mb-4">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex text-xs text-[#B68842] gap-4 py-4">
+                      <span>📅 {post.date}</span>
+                      <span>💬 {post.comments} comments</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

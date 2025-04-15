@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import PageTransition from "../components/PageTransition";
 
 interface ImageItem {
   src: string;
@@ -53,11 +54,12 @@ const Upcoming: React.FC = () => {
   };
 
   return (
-    <section className="relative px-12 py-10 text-[#B68842]">
-      <div className="flex flex-col items-center gap-10">
-        <h1 className="text-4xl font-bold text-center">
-          Upcoming / Running Projects
-        </h1>
+    <PageTransition>
+      <section className="relative px-12 py-0 text-[#B68842]">
+        <div className="flex flex-col items-center gap-10">
+            <h1 className="text-4xl font-bold text-center">
+            Upcoming / Running Projects
+          </h1>
 
         <div className="flex flex-wrap items-center justify-center gap-10 w-full">
           {/* Slider */}
@@ -75,19 +77,20 @@ const Upcoming: React.FC = () => {
             </Slider>
           </div>
 
-          {/* Info */}
-          <div className="flex flex-col gap-4 max-w-sm">
-            <h2 className="text-3xl font-bold">{images[currentSlide].title}</h2>
-            <p className="text-black">
-              This is a brief overview of the project. It showcases some of the
-              best work I've done using React, Tailwind, and other technologies.
-            </p>
-            <ul className="text-[#B68842] space-y-2">
-              <li>
-                <strong>Client:</strong> {images[currentSlide].caption}
-              </li>
-            </ul>
-          </div>
+            {/* Info */}
+            <div className="flex flex-col gap-4 max-w-sm">
+              <h2 className="text-3xl font-bold">{images[currentSlide].title}</h2>
+              <p className="text-black">
+                This is a brief overview of the project. It showcases some of
+                the best work I've done using React, Tailwind, and other
+                technologies.
+              </p>
+              <ul className="text-[#B68842] space-y-2">
+                <li>
+                  <strong>Client:</strong> {images[currentSlide].caption}
+                </li>
+              </ul>
+            </div>
 
           {/* Arrows */}
           <div className="flex flex-col items-center gap-4">

@@ -1,4 +1,5 @@
 import CountUp from "react-countup";
+import PageTransition from "../components/PageTransition";
 
 const stats = [
   { number: 13, label: "Years Of Experience" },
@@ -10,9 +11,11 @@ const stats = [
 
 const Count = () => {
   return (
-    <>
-    <div className="flex justify-center items-center">
-        <p className="text-5xl text-[#B68842] font-extrabold">Our Achievments</p>
+    <PageTransition>
+      <div className="flex justify-center items-center">
+        <p className="text-5xl text-[#B68842] font-extrabold">
+          Our Achievments
+        </p>
       </div>
       <div className="w-auto h-[700px] flex items-center justify-center px-4">
         <div className="max-w-8xl w-full flex flex-wrap items-center justify-center gap-14">
@@ -40,7 +43,7 @@ const Count = () => {
           ))}
         </div>
       </div>
-    </>
+    </PageTransition>
   );
 };
 
