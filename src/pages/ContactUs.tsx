@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import {
   faPhone,
   faEnvelope,
@@ -27,9 +27,17 @@ const ContactSplit: React.FC = () => {
       setIsSubmitting(false);
     }, 2000);
   };
+
+  useEffect(() => {
+    document.body.style.overflowY = "hidden";
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, []);
+
   return (
     <PageTransition>
-      <div className="flex flex-col md:flex-row min-h-screen">
+      <div className="flex flex-col md:flex-row h-screen overflow-hidden">
         <div className="flex-1 flex flex-col items-center px-6 py-10">
           <div className="w-full max-w-2xl flex flex-col gap-10 space-y-4">
             {/* Title */}

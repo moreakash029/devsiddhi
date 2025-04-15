@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
@@ -53,9 +53,18 @@ const Upcoming: React.FC = () => {
     afterChange: (index: number) => setCurrentSlide(index),
   };
 
+  useEffect(() => {
+    document.body.style.overflowY = "hidden";
+  
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, []);
+  
+
   return (
     <PageTransition>
-      <section className="relative px-12 py-0 text-[#B68842]">
+     <section className="relative h-screen overflow-hidden px-12 py-0 text-[#B68842]">
         <div className="flex flex-col items-center gap-10">
           <h1 className="text-4xl font-bold text-center">
             Upcoming / Running Projects
