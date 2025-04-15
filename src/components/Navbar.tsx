@@ -50,7 +50,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/portfolio-upc" className="hover:text-[#D12023]">
+            <Link to="/portfolio-upcoming" className="hover:text-[#D12023]">
               portfolio
             </Link>
           </li>
