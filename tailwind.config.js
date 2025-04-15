@@ -1,27 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-      "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",
-    ],
-    theme: {
-      extend: {
-        keyframes: {
-          slideDown: {
-            '0%': { opacity: '0', transform: 'translateY(-50px)' },
-            '100%': { opacity: '1', transform: 'translateY(0)' },
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      animation: {
+        shimmer: "shimmer 3s linear infinite"
+      },
+      keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
           },
-          slideUp: {
-            '0%': { opacity: '0', transform: 'translateY(50px)' },
-            '100%': { opacity: '1', transform: 'translateY(0)' },
+          to: {
+            backgroundPosition: "-200% 0",
           },
-        },
-        animation: {
-          slideDown: 'slideDown 1s ease-out',
-          slideUp: 'slideUp 1s ease-out',
         },
       },
     },
-    plugins: [],
-  };
-  
+  },
+  plugins: [],
+};

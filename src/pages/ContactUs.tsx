@@ -1,4 +1,5 @@
 import React, { FormEvent, useEffect, useState } from "react";
+import '../index.css'
 import {
   faPhone,
   faEnvelope,
@@ -153,7 +154,7 @@ const ContactSplit: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-gradient-to-r from-[#B68842] to-[#B68842] text-white font-bold text-base px-8 py-3 rounded-full mt-2 transition-transform duration-300 hover:scale-105 hover:bg-[#D12023] disabled:opacity-60"
+                  className="shimmer-button inline-flex py-2 px-6 text-sm items-center justify-center rounded-full bg-[linear-gradient(110deg,#AB5B55,45%,#EADCF7,55%,#AB5B55)] bg-[length:200%_100%] font-bold text-white gap-1 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
                 >
                   {isSubmitting ? "Submitting..." : "Submit now"}
                 </button>

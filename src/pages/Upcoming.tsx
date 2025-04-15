@@ -55,21 +55,21 @@ const Upcoming: React.FC = () => {
 
   useEffect(() => {
     document.body.style.overflowY = "hidden";
-  
+
     return () => {
       document.body.style.overflowY = "auto";
     };
   }, []);
-  
 
   return (
     <PageTransition>
-     <section className="relative h-screen overflow-hidden px-12 py-0 text-[#B68842]">
-        <div className="flex flex-col items-center gap-10">
-          <h1 className="text-4xl font-bold text-center">
-            Upcoming / Running Projects
-          </h1>
-
+      <div className="flex justify-center items-center p-6">
+        <div className="text-4xl font-extrabold text-center text-[#B68842]">
+          Upcoming / Running Projects
+        </div>
+      </div>
+      <div className="overflow-hidden p-15 text-[#B68842]">
+        <div className="flex justify-center items-center gap-10">
           <div className="flex flex-wrap items-center justify-center gap-10 w-full">
             {/* Slider */}
             <div className="w-[600px] h-[400px] rounded-xl overflow-hidden shadow-lg">
@@ -120,7 +120,7 @@ const Upcoming: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </PageTransition>
   );
 };

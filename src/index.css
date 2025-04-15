@@ -96,3 +96,16 @@ section {
   flex-direction: column;
   justify-content: center;
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.shimmer-button {
+  animation: shimmer 3s linear infinite;
+}

@@ -80,12 +80,12 @@ const settings = {
 const Post = () => {
   return (
     <PageTransition>
-      <div className="min-h-screen flex items-center justify-center p-6">
-        <div className="hidden md:flex flex-col justify-center items-center">
-          <h2 className="text-6xl text-[#B68842] font-extrabold transform -rotate-90 ">
-            Latest Posts
-          </h2>
-        </div>
+      <div className="flex justify-center items-center text-center mb-6">
+        <h2 className="text-4xl text-[#B68842] font-extrabold">Latest Posts</h2>
+      </div>
+
+      <div className="flex items-center justify-center p-12">
+        {/* Centered title above the slider */}
 
         <div className="w-full max-w-[900px] relative">
           <Slider {...settings}>
@@ -101,7 +101,7 @@ const Post = () => {
                     <span className="inline-block bg-[#B68842] text-black text-xs px-3 py-1 rounded-full mb-3">
                       {post.category}
                     </span>
-                    <h3 className="text-xl font-bold  py-4">{post.title}</h3>
+                    <h3 className="text-xl font-bold py-4">{post.title}</h3>
                     <p className="text-md text-[#B68842] mb-4">
                       {post.excerpt}
                     </p>
