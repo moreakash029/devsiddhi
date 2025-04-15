@@ -28,6 +28,7 @@ export default function Home() {
         className={`w-full h-full object-cover ${
           showSecondVideo ? "hidden" : "block"
         }`}
+        muted
         playsInline
       >
         <source src="/videos/fableweb.webm" type="video/webm" />
@@ -39,6 +40,7 @@ export default function Home() {
         className={`w-full h-full object-cover ${
           showSecondVideo ? "block" : "hidden"
         }`}
+        muted
         loop
         playsInline
       >
