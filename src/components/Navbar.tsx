@@ -35,32 +35,32 @@ export default function Navbar() {
           }`}
         >
           <li>
-            <Link to="/" className="hover:text-[#B68842]">
+            <Link to="/" className="hover:text-[#D12023]">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="hover:text-[#B68842]">
+            <Link to="/about" className="hover:text-[#D12023]">
               About
             </Link>
           </li>
           <li>
-            <Link to="/count" className="hover:text-[#B68842]">
+            <Link to="/count" className="hover:text-[#D12023]">
               Count
             </Link>
           </li>
           <li>
-            <Link to="/portfolio" className="hover:text-[#B68842]">
+            <Link to="/portfolio" className="hover:text-[#D12023]">
               portfolio
             </Link>
           </li>
           <li>
-            <Link to="/contact-us" className="hover:text-[#B68842]">
+            <Link to="/contact-us" className="hover:text-[#D12023]">
               Contact Us
             </Link>
           </li>
           <li>
-            <Link to="post" className="hover:text-[#B68842]">
+            <Link to="post" className="hover:text-[#D12023]">
               Post
             </Link>
           </li>
