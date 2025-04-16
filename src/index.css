@@ -51,8 +51,8 @@ main > section {
   --gradient-border: conic-gradient(
     from var(--border-angle),
     transparent 25%,
-    #b68842,
-    #3ef5f5 99%,
+    #fff,
+    #D12023 99%,
     transparent
   );
 
