@@ -40,10 +40,10 @@ main > section {
   --border-angle: 0turn;
   --main-bg: conic-gradient(
     from var(--border-angle),
-    #f9f0f0,
-    #f9f0f0 5%,
-    #f9f0f0 60%,
-    #f9f0f0 95%
+    #b68842,
+    #b68842 5%,
+    #b68842 60%,
+    #b68842 95%
   );
 
   border: solid 4px transparent;
@@ -51,17 +51,23 @@ main > section {
   --gradient-border: conic-gradient(
     from var(--border-angle),
     transparent 25%,
-    #3ef5f5,
-    #ab5b55 99%,
+    #b68842,
+    #3ef5f5 99%,
     transparent
   );
 
-  background: var(--main-bg) padding-box, var(--gradient-border) border-box,
-    var(--main-bg) border-box;
+  background: 
+    /* // padding-box clip this background in to the overall element except the border. */
+    var(--main-bg) padding-box,
+    /* // border-box extends this background to the border space */
+      var(--gradient-border) border-box,
+    /* // Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
+      var(--main-bg) border-box;
 
   background-position: center center;
 
   animation: bg-spin 3s linear infinite;
+}
   @keyframes bg-spin {
     to {
       --border-angle: 1turn;
@@ -71,6 +77,11 @@ main > section {
   &:hover {
     animation-play-state: paused;
   }
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
 }
 
 html {
