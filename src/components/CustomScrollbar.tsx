@@ -10,11 +10,11 @@ const CustomScrollbar: React.FC = () => {
   const routes = [
     { path: "/", name: "Home" },
     { path: "/about", name: "About" },
-    { path: "/count", name: "Count" },
+    { path: "/achievements", name: "Achievements" },
     { path: "/portfolio-upcoming", name: "Portfolio" },
     { path: "/portfolio-completed", name: "Portfolio" },
-    { path: "/contact-us", name: "Contact Us" },
     { path: "/post", name: "Post" },
+    { path: "/contact-us", name: "Contact Us" },
   ];
 
   const scrollbarRef = useRef<HTMLDivElement>(null);

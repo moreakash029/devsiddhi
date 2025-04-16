@@ -3,12 +3,20 @@ import { useState } from "react";
 
 export default function Navbar() {
   const location = useLocation();
-
   const [isOpen, setIsOpen] = useState(false);
   const isHome = location.pathname === "/";
 
+  // Add an array of nav items
+  const navItems = [
+    { label: "Home", to: "/" },
+    { label: "About", to: "/about" },
+    { label: "Achievements", to: "/achievements" },
+    { label: "Portfolio", to: "/portfolio-upcoming" },
+    { label: "Post", to: "/post" },
+    { label: "Contact Us", to: "/contact-us" },
+  ];
+
   return (
-    // <nav className=" text-[#d30e00] p-4 font-semibold absolute top-0 left-0 w-full z-10 bg-transparent">
     <nav className="sticky top-0 left-0 lg:top-auto z-50 w-full bg-transparent font-bold p-5">
       <div className="flex justify-between items-center">
         <div className="text-2xl font-bold">
@@ -30,40 +38,22 @@ export default function Navbar() {
         </button>
 
         <ul
-          className={`lg:flex space-x-8 text-[#B68842] ${
+          className={`lg:flex lg:space-x-8 space-y-4 lg:space-y-0 mt-4 lg:mt-0 text-[#B68842] ${
             isOpen ? "block" : "hidden"
           }`}
         >
-          <li>
-            <Link to="/" className="hover:text-[#D12023]">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="hover:text-[#D12023]">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/count" className="hover:text-[#D12023]">
-              Count
-            </Link>
-          </li>
-          <li>
-            <Link to="/portfolio-upcoming" className="hover:text-[#D12023]">
-              portfolio
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact-us" className="hover:text-[#D12023]">
-              Contact Us
-            </Link>
-          </li>
-          <li>
-            <Link to="post" className="hover:text-[#D12023]">
-              Post
-            </Link>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.to}>
+              <Link
+                to={item.to}
+                className={`hover:text-[#D12023] ${
+                  location.pathname === item.to ? "text-[#D12023]" : ""
+                }`}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

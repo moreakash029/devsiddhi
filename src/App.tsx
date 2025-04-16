@@ -3,16 +3,16 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
-import Count from "./pages/Count";
 import ContactUs from "./pages/ContactUs";
 import Post from "./pages/Post";
 import Upcoming from "./pages/Upcoming";
 import CustomScrollbar from "./components/CustomScrollbar";
 import Portfolio from "./pages/Completed";
+import Achievements from "./pages/Achievements";
 
 function App() {
   const location = useLocation();
-  
+
   return (
     <div className="relative">
       <Navbar />
@@ -20,11 +20,11 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/count" element={<Count />} />
+          <Route path="/achievements" element={<Achievements />} />
           <Route path="/portfolio-upcoming" element={<Upcoming />} />
           <Route path="/portfolio-completed" element={<Portfolio />} />
-          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/post" element={<Post />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </AnimatePresence>
       <CustomScrollbar />

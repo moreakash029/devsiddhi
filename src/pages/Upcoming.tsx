@@ -15,22 +15,22 @@ interface ImageItem {
 const images: ImageItem[] = [
   {
     src: "assets/green.jpg",
-    title: "DevSidhhi Green",
+    title: "DevSiddhi Green",
     caption: "Green Nature",
   },
   {
     src: "assets/fable.jpg",
-    title: "DevSidhhi Fantasy",
+    title: "DevSiddhi Fantasy",
     caption: "Fantasy Fable",
   },
   {
     src: "assets/felicia.jpg",
-    title: "DevSidhhi Felicia",
+    title: "DevSiddhi Felicia",
     caption: "Felicia Portrait",
   },
   {
     src: "assets/Fabula.jpg",
-    title: "DevSidhhi Fabula",
+    title: "DevSiddhi Fabula",
     caption: "Fabula Lights",
   },
 ];
